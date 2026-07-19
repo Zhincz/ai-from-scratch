@@ -65,3 +65,4 @@ class Value:
 
     def __repr__(self):
         return f"Value(data={self.data:.4f}, grad={self.grad:.4f})"
+

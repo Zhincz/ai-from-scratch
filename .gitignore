@@ -16,6 +16,9 @@ data/*
 # Jupyter
 .ipynb_checkpoints/
 
+# Ảnh sinh ra từ script vẽ
+*.png
+
 # Config cá nhân của editor / claude
 .claude/
 .vscode/
