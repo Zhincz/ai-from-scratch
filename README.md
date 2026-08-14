@@ -29,6 +29,7 @@ TODO để mình tự điền cho tới khi test pass.
 | 04 | Neural net | tự làm | forward/backward, backprop tay |
 | 05 | Tiny autograd | tự làm | tự động tính đạo hàm (kiểu micrograd) |
 | 06 | Activation functions | tự làm | sigmoid/tanh/relu/softmax + đạo hàm, vanishing gradient |
+| 07 | Decision tree | ✅ làm sẵn | gini/entropy, tách nhị phân kiểu CART, cái giá của thuật toán tham lam |
 
 Chạy test một bài:
 

@@ -23,6 +23,20 @@ def make_blobs2(n=200, seed=0):
     return x[idx], y[idx]
 
 
+def make_xor(n=400, noise=0.35, seed=0):
+    """Bốn cụm ở bốn góc, nhãn theo XOR của dấu hai toạ độ.
+
+    Mô hình tuyến tính chịu chết ở đây, còn cây thì cần ít nhất 2 tầng —
+    tầng 1 chưa lộ gì cả vì xét riêng từng cột thì gain bằng 0.
+    """
+    rng = np.random.default_rng(seed)
+    centers = np.array([[-1, -1], [-1, 1], [1, -1], [1, 1]], dtype=float)
+    labels = np.array([0, 1, 1, 0])
+    idx = rng.integers(0, 4, size=n)
+    x = centers[idx] + rng.normal(0, noise, size=(n, 2))
+    return x, labels[idx].astype(float)
+
+
 def train_test_split(x, y, ratio=0.8, seed=0):
     rng = np.random.default_rng(seed)
     idx = rng.permutation(len(x))
